@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import logo from '../../../assets/brand/logo.png'
-import { FcBrokenLink } from 'react-icons/fc';
+
 const Navbar = () => {
     const navBarLinks = <>
     <li><NavLink to="/">Home</NavLink></li>
