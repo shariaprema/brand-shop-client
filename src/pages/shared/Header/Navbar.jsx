@@ -4,7 +4,7 @@ import { FcBrokenLink } from 'react-icons/fc';
 const Navbar = () => {
     const navBarLinks = <>
     <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/product">Add Product</NavLink></li>
+        <li><NavLink to="/addProduct">Add Product</NavLink></li>
         <li><NavLink to="/cart">My Cart</NavLink></li>
     <li><NavLink to="/dashboard">Dashboard</NavLink></li>
     <li><NavLink to="/login">login</NavLink></li>
@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar text-black font-semibold bg-white sticky inset-0 z-10 h-max w-full max-w-full rounded-none border border-white/80 bg-opacity-80 py-2 px-4 shadow-md backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-2">
+            <div className="navbar text-black font-semibold bg-yellow-400 sticky inset-0 z-10 h-max w-full max-w-full rounded-none border border-white/80 bg-opacity-80 py-2 px-4 shadow-md backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-2">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -44,12 +44,14 @@ const Navbar = () => {
             <div className="navbar-end">
              
                 <button
-                className="middle none center  rounded-lg bg-gradient-to-tr from-cyan-300 to-pink-400 py-2 px-4  text-sm font-bold  text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none md:inline-block lg:inline-block"
+                className="middle none center  rounded-lg bg-gradient-to-tr from-cyan-300 to-pink-400 py-2 px-4  text-sm font-bold  text-black shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none md:inline-block lg:inline-block"
                 type="button"
                 data-ripple-light="true"
                 >
                 <span>Login</span>
                 </button>
+
+                
            
             </div>
         </div>

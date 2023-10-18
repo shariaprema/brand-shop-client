@@ -3,6 +3,7 @@ import bannerImg from '../../../assets/brand/slider-banner-1.jpg'
 const Banner = () => {
     return (
         <div>
+            
 
 <div className="hero" >
     <img src={bannerImg} className='hero-overlay bg-opacity-30' alt="" />
@@ -25,6 +26,7 @@ const Banner = () => {
               <button type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-[#4fbf70] hover:bg-[#4fbf70] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-[#53c074] dark:hover:bg-[#34a756] dark:focus:ring-[#4fbf70]">Search</button>
           </div>
       </form>
+
       </div>
     
 
