@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "brand": "Apple",
+        "brand_img":"https://i.ibb.co/rdH1cKy/images.png",
+        "image_1": "product1_image1.jpg",
+        "image_2": "product1_image2.jpg",
+        "image_3": "product1_image3.jpg"
+    },
+    {
+        "id": 2,
+        "brand": "SONY",
+        "brand_img":"https://i.ibb.co/bsLYyBq/sony.jpg",
+        "image_1": "product2_image1.jpg",
+        "image_2": "product2_image2.jpg",
+        "image_3": "product2_image3.jpg"
+    },
+    {
+        "id": 3,
+        "brand": "Samsung",
+        "brand_img":"https://i.ibb.co/x1R3Bqq/sumsung.png",
+        "image_1": "product3_image1.jpg",
+        "image_2": "product3_image2.jpg",
+        "image_3": "product3_image3.jpg"
+    },
+    {
+        "id": 4,
+        "brand": "Hp",
+        "brand_img":"https://i.ibb.co/dcV6yvM/hp.png",
+        "image_1": "product4_image1.jpg",
+        "image_2": "product4_image2.jpg",
+        "image_3": "product4_image3.jpg"
+    },
+    {
+        "id": 5,
+        "brand": "LG",
+        "brand_img":"https://i.ibb.co/LNj1Dnm/Lg.png",
+        "image_1": "product5_image1.jpg",
+        "image_2": "product5_image2.jpg",
+        "image_3": "product5_image3.jpg"
+    },
+    {
+        "id": 6,
+        "brand": "ASUS",
+        "brand_img":"https://i.ibb.co/HzrGLRT/asus.png",
+        "image_1": "product6_image1.jpg",
+        "image_2": "product6_image2.jpg",
+        "image_3": "product6_image3.jpg"
+    }
+]

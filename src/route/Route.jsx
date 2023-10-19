@@ -5,6 +5,8 @@ import {
 import Roots from "../layouts/Roots";
 import Home from "../pages/Home/Home";
 import AddProduct from "../pages/AddProduct/AddProduct";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Rehister/Register";
   
   
   const router = createBrowserRouter([
@@ -20,6 +22,14 @@ import AddProduct from "../pages/AddProduct/AddProduct";
       {
         path: "/addProduct",
         element: <AddProduct></AddProduct>
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
       },
     ],
     },
