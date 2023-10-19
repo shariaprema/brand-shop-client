@@ -1,7 +1,23 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from '../../../assets/brand/logo.png'
+import { useContext } from "react";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
+
+    const {userLogout,user} = useContext(AuthContext)
+
+    const handleSignOut =()=>{
+        userLogout()
+        .then(() => {
+        console.log('Sign-out successful.');
+        }).catch((error) => {
+        console.log(error.message);
+        });
+    }
+
+
+
     const navBarLinks = <>
     <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/addProduct">Add Product</NavLink></li>
@@ -42,14 +58,51 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-             
-                <button
-                className="middle none center  rounded-lg bg-gradient-to-tr from-cyan-300 to-pink-400 py-2 px-4  text-sm font-bold  text-black shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none md:inline-block lg:inline-block"
+            
+            {
+                user?
+                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center">
+                <div className="mt-3">
+                <p className="text-sm">{user.email}</p>
+                <p className="text-xs font-bold">{user.displayName}</p>
+                </div>
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                    <div className="w-10 rounded-full">
+                    <img src={user.photoURL} alt={user.displayName} />
+                    </div>
+                </label>
+               </div>
+               <div>
+               <Link to='/login'>
+                <button onClick={handleSignOut}
+                 className="middle none center  rounded-lg bg-gradient-to-tr from-blue-400 to-blue-900 py-2 px-4  text-sm font-bold  text-black shadow-md shadow-blue-500/70 transition-all hover:shadow-lg hover:shadow-yellow-300/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none md:inline-block lg:inline-block"
+                 type="button"
+                 data-ripple-light="true"
+                 >
+                 <span>Sign-In</span>
+                </button>
+                </Link>
+               </div>
+              
+                </div>
+
+                
+                    :
+                   
+                <Link to="/login">
+                 <button
+                className="middle none center  rounded-lg bg-gradient-to-tr from-blue-400 to-blue-900 py-2 px-4  text-sm font-bold  text-black shadow-md shadow-blue-500/70 transition-all hover:shadow-lg hover:shadow-yellow-300/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none md:inline-block lg:inline-block"
                 type="button"
                 data-ripple-light="true"
                 >
                 <span>Login</span>
                 </button>
+                </Link>
+                
+               }
+             
+                
 
                 
            
@@ -61,3 +114,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+ 

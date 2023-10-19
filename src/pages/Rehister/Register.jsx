@@ -1,14 +1,61 @@
 import { Link } from "react-router-dom";
 import Navbar from "../shared/Header/Navbar";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const Register = () => {
+
+    const {createUser} = useContext(AuthContext)
+
+
+    const handleRegister = e =>{
+        e.preventDefault()
+        const form = new FormData(e.currentTarget)
+        
+        const name =form.get('name')
+        const img =form.get('img')
+        const email =form.get('email')
+        const password =form.get('password')
+        console.log(name,img,email, password)
+
+        //validation
+        if(password.length < 6){
+            toast.error('password should be at least 6 characters or more')
+            return;
+        }
+
+        else if(!/[A-Z]/.test(password)){
+            toast.error('Your password should have at least one upper case characters')
+            return;
+        }
+
+        else if(!/[\W_]/g.test(password)){
+            toast.error('Your password should have at least one special characters')
+            return;
+        }
+
+
+
+        createUser(email,password)
+        .then((res) => {
+         console.log(res.user);
+         toast.success('User register successfully') 
+          })
+          .catch((error) => {
+            toast.error(error.message)
+          });
+
+    }
+
     return (
         <div>
             <Navbar></Navbar>
-            {/* onSubmit={handleRegister} */}
+            
             <div className="bg-base-200 min-h-screen">
             <h2 className="text-3xl text-center py-5">Please Register</h2>
-            <form  className="card-body lg:w-1/2 md:w-3/4 mx-auto bg-white rounded">
+            <form onSubmit={handleRegister} className="card-body lg:w-1/2 md:w-3/4 mx-auto bg-white rounded">
             <div className="form-control">
                 <label className="label">
                     <span className="label-text">Your Name</span>
@@ -46,7 +93,9 @@ const Register = () => {
 
         
         </div>
-            
+          <Toaster
+          position="top-right"
+          reverseOrder={false}/> 
         </div>
     );
 };

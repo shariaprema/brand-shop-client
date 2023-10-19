@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
 
-const {googleSignIn} = useContext(AuthContext);
+const {googleSignIn, logInUser} = useContext(AuthContext);
  
 const handleLogin = (e)=>{
     console.log(e);
@@ -15,6 +15,27 @@ const handleLogin = (e)=>{
         const email =form.get('email')
         const password =form.get('password')
         console.log(email,password);
+
+
+    //validation
+    if(password.length < 6){
+        toast.error('Password must have at least 6 characters')
+        return;
+    }
+
+
+    logInUser(email, password)
+    .then((result) => {
+        console.log(result.user);
+        toast.success('User logged in successfully')        
+        e.target.reset();
+    
+    })
+    .catch((error) => {
+       toast.error(error.message)
+    });
+
+
 
 
     
