@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
 import { FcGoogle } from 'react-icons/fc';
 import Navbar from "../shared/Header/Navbar";
@@ -7,6 +7,9 @@ import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
 
 const {googleSignIn, logInUser} = useContext(AuthContext);
+
+const location = useLocation();
+const navigate = useNavigate();
  
 const handleLogin = (e)=>{
     console.log(e);
@@ -28,7 +31,8 @@ const handleLogin = (e)=>{
     .then((result) => {
         console.log(result.user);
         toast.success('User logged in successfully')        
-        e.target.reset();
+        navigate(location?.state? location.state : '/')
+        e.target.reset();       
     
     })
     .catch((error) => {
@@ -62,7 +66,7 @@ const handleGoogleLogin =()=>{
         <div>
             
             <Navbar></Navbar>
-            <div className=" min-h-screen">
+            <div className="min-h-screen">
             <h2 className="text-3xl text-center py-5">Please Login</h2>
             <form  onSubmit={handleLogin}  className="card-body lg:w-1/2 md:w-3/4 mx-auto  rounded-lg ">
     
@@ -90,7 +94,7 @@ const handleGoogleLogin =()=>{
                 <div  className="flex justify-center items-center ">
                 <button onClick={handleGoogleLogin}
                     type="button" className=" border border-x-yellow-400 border-y-yellow-400  bg-white  text-black hover:bg-yellow-400/90 focus:ring-4 focus:outline-none focus:ring-yellow-400/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-yellow-500/55 mr-2 mb-2">
-                                    <FcGoogle className=" w-6 h-6 mr-1"/>
+                     <FcGoogle className="w-6 h-6 mr-1"/>
                 
                 Sign in with Google
                 </button>

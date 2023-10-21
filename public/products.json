@@ -1,0 +1,240 @@
+[{
+  "_id": {
+    "$oid": "65312c0556bc16fa6ba86099"
+  },
+  "name": "iphone15",
+  "image": "https://i.ibb.co/5Fzbd12/iphone-15-pro.png",
+  "brand": "Apple",
+  "type": "Phone",
+  "price": "165000",
+  "description": "iPhone 15 Pro Max: Unleash performance, capture brilliance, and elevate your mobile experience with the pinnacle of innovation and style.",
+  "rating": "5"
+},
+{
+  "_id": {
+    "$oid": "65312dcc56bc16fa6ba8609a"
+  },
+  "name": "Apple watch Ultra GPS+",
+  "image": "https://i.ibb.co/gjBF4GS/apple-watch.jpg",
+  "brand": "Apple",
+  "type": "Smart Watch",
+  "price": "104900",
+  "description": "Elevate your fitness and style with the Apple Watch Ultra GPS+—your ultimate companion for active living.",
+  "rating": "4"
+},
+{
+  "_id": {
+    "$oid": "65312f8856bc16fa6ba8609b"
+  },
+  "name": "MacOS",
+  "image": "https://i.ibb.co/C21XF8v/carl-heyerdahl-KE0n-C8-58-MQ-unsplash.jpg",
+  "brand": "Apple",
+  "type": "Computer",
+  "price": "150000",
+  "description": "Experience seamless productivity and creativity with macOS—your gateway to a world of innovation and performance.",
+  "rating": "5"
+},
+{
+  "_id": {
+    "$oid": "6531315856bc16fa6ba8609c"
+  },
+  "name": "Apple AirPods 3",
+  "image": "https://i.ibb.co/KsdFF4x/dennis-brendel-YLNMXz-Xk8zs-unsplash.jpg",
+  "brand": "Apple",
+  "type": "Ear Phone",
+  "price": "22000",
+  "description": "Apple AirPods 3: Immerse in premium sound, comfort, and style. Elevate your audio experience with true wireless freedom.",
+  "rating": "5"
+},
+{
+  "_id": {
+    "$oid": "6531339056bc16fa6ba8609d"
+  },
+  "name": "Samsung Galaxy S21",
+  "image": "https://i.ibb.co/sCP570M/anh-nhat-Pd-ALQmf-Eqv-E-unsplash.jpg",
+  "brand": "Samsung",
+  "type": "Phone",
+  "price": "139999",
+  "description": "Samsung Galaxy S21: Cutting-edge technology, stunning design, and exceptional performance in the palm of your hand.",
+  "rating": "5"
+},
+{
+  "_id": {
+    "$oid": "653134ef56bc16fa6ba8609e"
+  },
+  "name": "Samsung QLED 4K ",
+  "image": "https://i.ibb.co/HrJHm08/qled2-600x600.jpg",
+  "brand": "Samsung",
+  "type": "TV",
+  "price": "425000",
+  "description": "Elevate your viewing experience with Samsung QLED 4K: Brilliant colors, immersive quality, and smart entertainment in one.",
+  "rating": "4"
+},
+{
+  "_id": {
+    "$oid": "6531363756bc16fa6ba8609f"
+  },
+  "name": "Samsung Galaxy  Buds +",
+  "image": "https://i.ibb.co/YLxt5CY/N09-medium09.jpg",
+  "brand": "Samsung",
+  "type": "Ear Phone",
+  "price": "11000",
+  "description": "Samsung Galaxy Buds+: Premium sound, all-day comfort, and seamless connection for an elevated listening experience.",
+  "rating": "4"
+},
+{
+  "_id": {
+    "$oid": "6531398b56bc16fa6ba860a0"
+  },
+  "name": "Samsung Galaxy Tab S",
+  "image": "https://i.ibb.co/zbCvkD0/brooke-cagle-442bt-Op-Rp9-Q-unsplash.jpg",
+  "brand": "Samsung",
+  "type": "Tablet",
+  "price": "85000",
+  "description": "Samsung Galaxy Tab S: Unleash your creativity and productivity with stunning display, powerful performance, and versatility.",
+  "rating": "3"
+},
+{
+  "_id": {
+    "$oid": "65313b4f56bc16fa6ba860a1"
+  },
+  "name": "Sony Bravia A8H",
+  "image": "https://i.ibb.co/1QYY61n/1.jpg",
+  "brand": "SONY",
+  "type": "TV",
+  "price": "135000",
+  "description": "Elevate your home entertainment with stunning OLED picture quality and immersive sound.",
+  "rating": "5"
+},
+{
+  "_id": {
+    "$oid": "65313c4d56bc16fa6ba860a2"
+  },
+  "name": "Sony xperia",
+  "image": "https://i.ibb.co/5WK8DY1/assets-Asset-Hierarchy-Consumer-Assets-Mobile-Phones-Xperia-Series-Xperia-1-V-e-Comm-Product-Images.png",
+  "brand": "SONY",
+  "type": "Phone",
+  "price": "88000",
+  "description": "Unleash performance, capture brilliance, and elevate your mobile experience with the pinnacle of innovation and style.",
+  "rating": "4"
+},
+{
+  "_id": {
+    "$oid": "65313d8456bc16fa6ba860a3"
+  },
+  "name": "SONY WH-1000XM3",
+  "image": "https://i.ibb.co/zHgTRJF/yearone-opl-CWB9-A0b-I-unsplash.jpg",
+  "brand": "SONY",
+  "type": "Head Phone",
+  "price": "6689",
+  "description": "Immerse in premium sound and unparalleled noise-cancellation, perfect for music and calls on-the-go.",
+  "rating": "5"
+},
+{
+  "_id": {
+    "$oid": "65313e7856bc16fa6ba860a4"
+  },
+  "name": "Sony WF-C500 ",
+  "image": "https://i.ibb.co/BGrJ8Qv/yu-hai-Hu-TUDQqr88c-unsplash.jpg",
+  "brand": "SONY",
+  "type": "Ear Phone",
+  "price": "8550",
+  "description": "True wireless freedom with powerful sound and comfortable design for your active lifestyle.",
+  "rating": "4"
+},
+{
+  "_id": {
+    "$oid": "6531437556bc16fa6ba860a5"
+  },
+  "name": "‎LG Nano75",
+  "image": "https://i.ibb.co/zSbzGnM/43-NANO75-SQA-Nanocell-Tvs-350.jpg",
+  "brand": "LG",
+  "type": "TV",
+  "price": "250000",
+  "description": "LG Nano75: Experience vivid 4K clarity and immersive sound in a sleek and stylish package",
+  "rating": "5"
+},
+{
+  "_id": {
+    "$oid": "6531462056bc16fa6ba860a6"
+  },
+  "name": "LG 617L InstaView Door-in-Door ",
+  "image": "https://i.ibb.co/z82rHJb/D1.jpg",
+  "brand": "LG",
+  "type": "Fridge",
+  "price": "350000",
+  "description": "A spacious and smart refrigerator with Door-in-Door for convenient access to fresh delights.",
+  "rating": "4"
+},
+{
+  "_id": {
+    "$oid": "653147b556bc16fa6ba860a7"
+  },
+  "name": "‎23L NeoChef Microwave",
+  "image": "https://i.ibb.co/yQMc56y/D02-06-sg-appliances-categoryselector-6.webp",
+  "brand": "LG",
+  "type": "Microwave oven",
+  "price": "20000",
+  "description": " Elevate your culinary experience with precision cooking, sleek design, and intuitive features for the modern kitchen.",
+  "rating": "3"
+},
+{
+  "_id": {
+    "$oid": "6531492456bc16fa6ba860a8"
+  },
+  "name": "LG AI Direct Drive (AI DD)",
+  "image": "https://i.ibb.co/QnZstZt/md07581349-350x350.jpg",
+  "brand": "LG",
+  "type": "Washing Machine",
+  "price": "48500",
+  "description": "Revolutionize laundry care with AI-powered precision, optimal fabric care, and energy efficiency for your home.",
+  "rating": "3"
+},
+{
+  "_id": {
+    "$oid": "65314b5c56bc16fa6ba860a9"
+  },
+  "name": "Asus RT-AC750L",
+  "image": "https://i.ibb.co/z5zwM6h/2.jpg",
+  "brand": "ASUS",
+  "type": "Router",
+  "price": "3569",
+  "description": "Fast and reliable Wi-Fi with wide coverage, easy setup, and advanced features for seamless internet connectivity.",
+  "rating": "3"
+},
+{
+  "_id": {
+    "$oid": "65314be256bc16fa6ba860aa"
+  },
+  "name": "‎Asus U2000 Keyboard",
+  "image": "https://i.ibb.co/LrQLKrm/fwebp.webp",
+  "brand": "ASUS",
+  "type": "KeyBoard",
+  "price": "13000",
+  "description": "A sleek and comfortable keyboard and mouse combo for efficient work and effortless navigation, complementing your computer setup.",
+  "rating": "5"
+},
+{
+  "_id": {
+    "$oid": "65314dc556bc16fa6ba860ab"
+  },
+  "name": "ASUS VivoBook 15 X515EA",
+  "image": "https://i.ibb.co/VjH3zpv/aleksander-vlad-Kc-F7f-Uh-KFeg-unsplash.jpg",
+  "brand": "ASUS",
+  "type": "Laptop",
+  "price": "76500",
+  "description": "Unleash productivity and style with a sleek laptop featuring a vibrant display, powerful performance, and ergonomic design.",
+  "rating": "5"
+},
+{
+  "_id": {
+    "$oid": "65314ff556bc16fa6ba860ac"
+  },
+  "name": "Asus M241",
+  "image": "https://i.ibb.co/z2YLshH/nzubcayke62j5rpq-setting-xxx-0-90-end-800.png",
+  "brand": "ASUS",
+  "type": "Computer",
+  "price": "120000",
+  "description": "Power meets style in a compact package with robust performance, a stunning display, and versatile connectivity for your computing needs",
+  "rating": "4"
+}]

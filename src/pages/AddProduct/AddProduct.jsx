@@ -53,11 +53,11 @@ const AddProduct = () => {
             
             <div>
             <div>
-                <h2 className="text-2xl font-semibold py-6 text-center">Add Your Product</h2>
+                <h2 className="text-4xl font-bold py-10 text-center">Add Your Product</h2>
                 
             </div>
 
-            <div className="mb-20">
+            <div className="lg:mx-20">
                 
             <form onSubmit={handleAddProduct}>
             <div className="mb-6">
@@ -76,11 +76,12 @@ const AddProduct = () => {
                 
                 <label className="block mb-2 text-base font-semibold text-gray-900 dark:text-white">Brand Name</label>
                 <select name="brand" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option></option>
                 <option>Apple</option>
-                <option>SONY</option>
                 <option>Samsung</option>
+                <option>SONY</option>
                 <option>HP</option>
-                <option>Lg</option>
+                <option>LG</option>
                 <option>ASUS</option>
                 </select>
                 </div>
@@ -89,16 +90,23 @@ const AddProduct = () => {
                  
                 <label className="block mb-2 text-base font-semibold text-gray-900 dark:text-white">Product Type</label>
                 <select name="type" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option></option>
                 <option>Phone</option>
                 <option>Smart Watch</option>
                 <option>Head Phone</option>
+                <option>Ear Phone</option>
                 <option>Computer</option>
                 <option>TV</option>
                 <option>Laptop</option>
+                <option>Tablet</option>
                 <option>iPad</option>
+                <option>KeyBoard</option>
+                <option>Router</option>
                 <option>Fridge</option>
                 <option>AC</option>
                 <option>Washing Machine</option>
+                <option>Microwave oven</option>
+
 
                 </select>
 
@@ -120,6 +128,7 @@ const AddProduct = () => {
             <div className="mb-6">
                 <label className="block mb-2 text-base font-semibold text-gray-900 dark:text-white"> Rating</label>
                 <select name="rating" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option></option>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -129,7 +138,7 @@ const AddProduct = () => {
             </div>
           
           
-            <button type="submit" className="text-white flex justify-center items-center mx-auto bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+            <button type="submit" className=" mb-10 text-white flex justify-center items-center mx-auto bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
             </form>
 
             </div>
