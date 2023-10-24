@@ -1,4 +1,3 @@
-import Navbar from "../shared/Header/Navbar";
 
 const AddProduct = () => {
 
@@ -49,13 +48,17 @@ const AddProduct = () => {
 
     return (
         <div>
-            <Navbar></Navbar>
             
             <div>
+
             <div>
-                <h2 className="text-4xl font-bold py-10 text-center">Add Your Product</h2>
-                
+                <div className="mx-auto text-center py-10">
+                <h2 className="text-4xl font-bold">Add Your<span className="text-amber-400"> Product</span></h2>
+                <hr className="w-1/3  shadow-yellow-400 mx-auto mt-2" />
+
             </div>
+        </div>
+
 
             <div className="lg:mx-20">
                 

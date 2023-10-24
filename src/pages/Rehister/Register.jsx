@@ -56,10 +56,14 @@ const Register = () => {
 
     return (
         <div>
-            <Navbar></Navbar>
             
-            <div className="bg-base-200 min-h-screen">
-            <h2 className="text-3xl text-center py-5">Please Register</h2>
+            <div className=" min-h-screen">
+            <div>
+                <div className="mx-auto text-center pt-10">
+                <h2 className="text-4xl font-bold">Please <span className="text-amber-400">Register</span></h2>
+                <hr className="w-1/3  shadow-yellow-400 mx-auto mt-2" />
+                 </div>
+            </div>
             <form onSubmit={handleRegister} className="card-body lg:w-1/2 md:w-3/4 mx-auto bg-white rounded">
             <div className="form-control">
                 <label className="label">

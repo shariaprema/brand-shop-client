@@ -9,7 +9,10 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Rehister/Register";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/Error/ErrorPage";
-import DisplayAllProducts from "../pages/DisplayAllProducts/DisplayAllProducts";
+import SingleBrands from "../components/SingleBrands/SingleBrands";
+import DetailsProduct from "../pages/DetailsProduct/DetailsProduct";
+import ProductSlider from "../components/AllBrands/ProductSlider";
+
   
   
   const router = createBrowserRouter([
@@ -31,10 +34,34 @@ import DisplayAllProducts from "../pages/DisplayAllProducts/DisplayAllProducts";
           </PrivateRoute>
       },
       {
-        path: "/allProducts",
-        element: <DisplayAllProducts></DisplayAllProducts>,
+        path: "/update",
+        element: <h2></h2>,
         loader:()=>fetch(`http://localhost:5001/products`)
       },
+
+
+    
+      {
+        path: "/products/:brand",
+        element:<div>
+          <ProductSlider></ProductSlider>
+          <SingleBrands></SingleBrands>
+        </div>,
+        loader:({params})=>
+       { console.log(params)
+        return fetch(`http://localhost:5001/products/${params.brand}`)}
+      },
+
+
+      {
+        path: "/details/:id",
+        element:<DetailsProduct></DetailsProduct>,
+        loader:()=> fetch('http://localhost:5001/products')
+      },
+
+
+  
+
       {
         path: "/login",
         element: <Login></Login>
