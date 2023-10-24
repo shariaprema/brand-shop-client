@@ -11,7 +11,7 @@ const ProductSlider = () => {
         .then(data=>setSliders(data))
     },[])
 
-    console.log(sliders);
+    // console.log(sliders);
     return (
         <div>
          <h2>Slider here:{sliders.length}</h2>

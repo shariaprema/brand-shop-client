@@ -7,7 +7,6 @@ const AllBrands = () => {
 
 
     const allBrands = useLoaderData()
-    console.log(allBrands);
     return (
         <div>
          <div>

@@ -3,7 +3,6 @@ import Products from "../Products/Products";
 
 const SingleBrands = () => {
     const singleProduct = useLoaderData()
-    console.log(singleProduct);
    
     if (singleProduct.length === 0) {
 

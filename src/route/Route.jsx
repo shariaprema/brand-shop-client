@@ -12,6 +12,7 @@ import ErrorPage from "../pages/Error/ErrorPage";
 import SingleBrands from "../components/SingleBrands/SingleBrands";
 import DetailsProduct from "../pages/DetailsProduct/DetailsProduct";
 import ProductSlider from "../components/AllBrands/ProductSlider";
+import Cart from "../pages/AddToCard/Cart";
 
   
   
@@ -58,6 +59,14 @@ import ProductSlider from "../components/AllBrands/ProductSlider";
         element:<DetailsProduct></DetailsProduct>,
         loader:()=> fetch('http://localhost:5001/products')
       },
+      
+      {
+        path: "/cart",
+        element:<Cart></Cart>,
+       loader:()=> fetch('http://localhost:5001/cart')
+      },
+
+    
 
 
   

@@ -12,7 +12,7 @@ const AddProduct = () => {
         const description = form.description.value
         const rating = form.rating.value
 
-        console.log(name,image,brand,type,price,description,rating);
+        // console.log(name,image,brand,type,price,description,rating);
 
         const productData = {
             name,
@@ -60,7 +60,7 @@ const AddProduct = () => {
         </div>
 
 
-            <div className="lg:mx-20">
+            <div className="w-3/4 mx-auto ">
                 
             <form onSubmit={handleAddProduct}>
             <div className="mb-6">

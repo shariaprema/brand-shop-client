@@ -5,7 +5,8 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
 
-    const {userLogout,user} = useContext(AuthContext)
+    const {userLogout,user} = useContext(AuthContext);
+    console.log('USER>>>>>>',user);
 
     const handleSignOut =()=>{
         userLogout()
@@ -24,7 +25,7 @@ const Navbar = () => {
             user &&
             <> 
             <li><NavLink to="/addProduct">Add Product</NavLink></li>
-            <li><NavLink to="/allProducts">My Cart</NavLink></li>
+            <li><NavLink to="/cart">My Cart</NavLink></li>
             </>
         }
     <li><NavLink to="/login">login</NavLink></li>
