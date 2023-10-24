@@ -18,7 +18,7 @@ const Cart = () => {
                 if(data.deletedCount > 0){
                     Swal.fire({
                         title: 'Are you sure?',
-                        text: "Are you sure you want to remove this item?!",
+                        text: "Are you want to remove this product?!",
                         icon: 'warning',
                         showCancelButton: true,
                         confirmButtonColor: '#3085d6',

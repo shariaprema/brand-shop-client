@@ -13,6 +13,7 @@ import SingleBrands from "../components/SingleBrands/SingleBrands";
 import DetailsProduct from "../pages/DetailsProduct/DetailsProduct";
 import ProductSlider from "../components/AllBrands/ProductSlider";
 import Cart from "../pages/AddToCard/Cart";
+import Update from "../components/Update/Update";
 
   
   
@@ -65,6 +66,14 @@ import Cart from "../pages/AddToCard/Cart";
         element:<Cart></Cart>,
        loader:()=> fetch('http://localhost:5001/cart')
       },
+      {
+        path: "/update/:id",
+        element:<Update></Update>,
+       loader:({params})=> fetch(`http://localhost:5001/users/${params.id}`)
+      },
+
+
+
 
     
 
