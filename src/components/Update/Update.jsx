@@ -31,7 +31,7 @@ const {name, image,brandName,type,price,rating} = singleProduct
             rating
         }
 
-        fetch(`http://localhost:5001/users/${singleProduct._id}`, {
+        fetch(`https://brand-shop-server-15bdchsks-sharia-siddiquee-premas-projects.vercel.app/users/${singleProduct._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

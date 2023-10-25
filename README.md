@@ -23,4 +23,8 @@ Image,Name,Band Name,Type,Price, Rating, Details button, Update button
 
 
 ----
-##[My Project Link](https://653908dfbaae140ba7d505bb--voluble-donut-2254c0.netlify.app/cart)
+##[My Project Netlify Link](https://65392c490735e9007520fdab--fantastic-bublanina-76aeae.netlify.app/)
+
+----
+
+##[My Project firebase Link](https://brand-shop-d8abf.web.app)

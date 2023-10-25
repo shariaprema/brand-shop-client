@@ -23,7 +23,7 @@ const AddProduct = () => {
             rating
         }
 
-        fetch("http://localhost:5001/products", {
+        fetch("https://brand-shop-server-15bdchsks-sharia-siddiquee-premas-projects.vercel.app/products", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

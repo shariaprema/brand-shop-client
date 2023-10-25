@@ -26,7 +26,7 @@ import PrivateRoute from "./PrivateRoute";
       {
         path: "/",
         element: <Home></Home>,
-        loader:()=>fetch(`http://localhost:5001/brands`)
+        loader:()=>fetch(`https://brand-shop-server-15bdchsks-sharia-siddiquee-premas-projects.vercel.app/brands`)
       },
      
       {
@@ -45,34 +45,27 @@ import PrivateRoute from "./PrivateRoute";
         </div>,
         loader:({params})=>
        { console.log(params)
-        return fetch(`http://localhost:5001/products/${params.brand}`)}
+        return fetch(`https://brand-shop-server-15bdchsks-sharia-siddiquee-premas-projects.vercel.app/products/${params.brand}`)}
       },
 
 
       {
         path: "/details/:id",
         element:<PrivateRoute><DetailsProduct></DetailsProduct></PrivateRoute>,
-        loader:()=> fetch('http://localhost:5001/products')
+        loader:()=> fetch('https://brand-shop-server-15bdchsks-sharia-siddiquee-premas-projects.vercel.app/products')
       },
       
       {
         path: "/cart",
         element:<PrivateRoute><Cart></Cart></PrivateRoute>,
-       loader:()=> fetch('http://localhost:5001/cart')
+       loader:()=> fetch('https://brand-shop-server-15bdchsks-sharia-siddiquee-premas-projects.vercel.app/cart')
       },
       {
         path: "/update/:id",
         element:<PrivateRoute><Update></Update></PrivateRoute>,
-       loader:({params})=> fetch(`http://localhost:5001/users/${params.id}`)
+       loader:({params})=> fetch(`https://brand-shop-server-15bdchsks-sharia-siddiquee-premas-projects.vercel.app/users/${params.id}`)
       },
 
-
-
-
-    
-
-
-  
 
       {
         path: "/login",
