@@ -1,7 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
 import { FcGoogle } from 'react-icons/fc';
-import Navbar from "../shared/Header/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
@@ -9,10 +8,11 @@ const Login = () => {
 const {googleSignIn, logInUser} = useContext(AuthContext);
 
 const location = useLocation();
+console.log('location in the login page',location);
 const navigate = useNavigate();
  
+
 const handleLogin = (e)=>{
-    console.log(e);
         e.preventDefault()
         const form = new FormData(e.currentTarget)
         const email =form.get('email')
@@ -31,7 +31,7 @@ const handleLogin = (e)=>{
     .then((result) => {
         console.log(result.user);
         toast.success('User logged in successfully')        
-        navigate(location?.state? location.state : '/')
+        navigate(location?.state ? location.state : '/')
         e.target.reset();       
     
     })

@@ -1,4 +1,4 @@
-import {  Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import Products from "../Products/Products";
 
 const SingleBrands = () => {
@@ -23,7 +23,10 @@ const SingleBrands = () => {
         <div>
 
         <div>
-            <h2>All product</h2>
+            <div className="mx-auto text-center py-16">
+            <h2 className="text-4xl font-bold">Product <span className="text-amber-400">Collections</span></h2>
+            <hr className="w-1/3  shadow-yellow-400 mx-auto mt-2"/>
+        </div>
             
         </div>
         <div>

@@ -65,8 +65,8 @@ const DetailsProduct = () => {
         </div> 
 
       <div className="flex justify-center mx-auto my-20">
-            <div className="relative md:flex lg:flex w-full h-full  flex-row rounded-xl border border-y-yellow-400 border-x-yellow-400 bg-white bg-clip-border text-gray-700 shadow-xl">
-                <div className=" relative lg:w-3/2 md:w-2/5 sm:w-3/4  sm:mx-auto m-0 overflow-hidden text-gray-700 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
+            <div className="relative md:flex lg:flex w-full h-full md:h-1/3  flex-row rounded-xl border border-y-yellow-400 border-x-yellow-400 bg-white bg-clip-border text-gray-700 shadow-xl">
+                <div className=" relative  md:w-1/3  sm:mx-auto m-0 overflow-hidden text-gray-700 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
                     <img
                     src={image}
                     alt="image"

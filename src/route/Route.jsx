@@ -7,13 +7,13 @@ import Home from "../pages/Home/Home";
 import AddProduct from "../pages/AddProduct/AddProduct";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Rehister/Register";
-import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/Error/ErrorPage";
 import SingleBrands from "../components/SingleBrands/SingleBrands";
 import DetailsProduct from "../pages/DetailsProduct/DetailsProduct";
 import ProductSlider from "../components/AllBrands/ProductSlider";
 import Cart from "../pages/AddToCard/Cart";
 import Update from "../components/Update/Update";
+import PrivateRoute from "./PrivateRoute";
 
   
   
@@ -31,23 +31,17 @@ import Update from "../components/Update/Update";
      
       {
         path: "/addProduct",
-        element: <PrivateRoute>
-          <AddProduct></AddProduct>
-          </PrivateRoute>
-      },
-      {
-        path: "/update",
-        element: <h2></h2>,
-        loader:()=>fetch(`http://localhost:5001/products`)
+        element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
       },
 
-
-    
+ 
       {
-        path: "/products/:brand",
+        path: "/product/:brand/slider/:id",
         element:<div>
+         <PrivateRoute> 
           <ProductSlider></ProductSlider>
           <SingleBrands></SingleBrands>
+          </PrivateRoute>
         </div>,
         loader:({params})=>
        { console.log(params)
@@ -57,18 +51,18 @@ import Update from "../components/Update/Update";
 
       {
         path: "/details/:id",
-        element:<DetailsProduct></DetailsProduct>,
+        element:<PrivateRoute><DetailsProduct></DetailsProduct></PrivateRoute>,
         loader:()=> fetch('http://localhost:5001/products')
       },
       
       {
         path: "/cart",
-        element:<Cart></Cart>,
+        element:<PrivateRoute><Cart></Cart></PrivateRoute>,
        loader:()=> fetch('http://localhost:5001/cart')
       },
       {
         path: "/update/:id",
-        element:<Update></Update>,
+        element:<PrivateRoute><Update></Update></PrivateRoute>,
        loader:({params})=> fetch(`http://localhost:5001/users/${params.id}`)
       },
 

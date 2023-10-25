@@ -3,6 +3,10 @@ import Swal from 'sweetalert2'
 
 const Update = () => {
     const singleProduct = useLoaderData()
+
+const {name, image,brandName,type,price,rating} = singleProduct
+
+
     console.log(singleProduct);
 
     
@@ -13,7 +17,7 @@ const Update = () => {
         const form = e.target
         const name = form.name.value
         const image = form.img.value
-        const brand = form.brand.value
+        const brandName = form.brand.value
         const type = form.type.value
         const price = form.price.value
         const rating = form.rating.value
@@ -21,7 +25,7 @@ const Update = () => {
         const productData = {
             name,
             image,
-            brand,
+            brandName,
             type,
             price,
             rating
@@ -36,10 +40,10 @@ const Update = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-            if(data){
+            if(data.modifiedCount>0){
                 Swal.fire(
                     'Good job!',
-                    'Product Updated Successfgitully!',
+                    'Product Updated Successfully!',
                     'success'
                   )
             }
@@ -69,18 +73,18 @@ const Update = () => {
             
             <label className="block mb-2 ml-1 text-base font-semibold text-gray-900 dark:text-white">Product Name
             </label>
-            <input type="text"  name="name" className=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Product Name" required></input>
+            <input type="text" defaultValue={name}  name="name" className=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Product Name" required></input>
         </div>
         <div className="mb-6">
             
             <label className="block mb-2 ml-1 text-base font-semibold text-gray-900 dark:text-white">Image
             </label>
-            <input type="text" name="img" className="rounded-lg bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Product Image" required></input>
+            <input type="text" defaultValue={image} name="img" className="rounded-lg bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Product Image" required></input>
         </div>
         <div className="mb-6">
             
             <label className="block mb-2 text-base font-semibold text-gray-900 dark:text-white">Brand Name</label>
-            <select name="brand" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <select name="brand" defaultValue={brandName} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             <option></option>
             <option>Apple</option>
             <option>Samsung</option>
@@ -93,8 +97,8 @@ const Update = () => {
 
         <div className="mb-6">
              
-            <label className="block mb-2 text-base font-semibold text-gray-900 dark:text-white">Product Type</label>
-            <select name="type" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <label className="block  mb-2 text-base font-semibold text-gray-900 dark:text-white">Product Type</label>
+            <select name="type" defaultValue={type} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             <option></option>
             <option>Phone</option>
             <option>Smart Watch</option>
@@ -120,12 +124,12 @@ const Update = () => {
             
             <label className="block mb-2 ml-1 text-base font-semibold text-gray-900 dark:text-white">Price
             </label>
-            <input type="number"  name="price" className="bg-gray-50 border rounded-lg border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Product Price" required></input>
+            <input type="number" defaultValue={price}  name="price" className="bg-gray-50 border rounded-lg border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Product Price" required></input>
         </div>
     
         <div className="mb-6">
             <label className="block mb-2 text-base font-semibold text-gray-900 dark:text-white"> Rating</label>
-            <select name="rating" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <select name="rating" defaultValue={rating} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             <option></option>
             <option>1</option>
             <option>2</option>
@@ -136,7 +140,7 @@ const Update = () => {
         </div>
       
       
-        <button type="submit" className=" mb-10 text-white flex justify-center items-center mx-auto bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+        <button type="submit"  className=" mb-10 text-white flex justify-center items-center mx-auto bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Update Product</button>
         </form>
 
         </div>

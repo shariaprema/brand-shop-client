@@ -6,7 +6,7 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 const Navbar = () => {
 
     const {userLogout,user} = useContext(AuthContext);
-    console.log('USER>>>>>>',user);
+    
 
     const handleSignOut =()=>{
         userLogout()
@@ -69,8 +69,8 @@ const Navbar = () => {
                 <div className="flex justify-center items-center">
                 <div className="flex justify-center items-center">
                 <div className="mt-3">
-                <p className="text-sm">{user.email}</p>
-                <p className="text-xs font-bold">{user.displayName}</p>
+                <p className="text-sm hidden md:flex lg:flex">{user.email}</p>
+                <p className="text-xs font-bold hidden md:flex lg:flex">{user.displayName}</p>
                 </div>
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
@@ -81,11 +81,11 @@ const Navbar = () => {
                <div>
                <Link to='/login'>
                 <button onClick={handleSignOut}
-                 className="middle none center  rounded-lg bg-gradient-to-tr from-blue-400 to-blue-900 py-2 px-4  text-sm font-bold  text-black shadow-md shadow-blue-500/70 transition-all hover:shadow-lg hover:shadow-yellow-300/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none md:inline-block lg:inline-block"
+                 className="text-white  bg-blue-800 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                  type="button"
                  data-ripple-light="true"
                  >
-                 <span>Sign-In</span>
+                 <span>Logout</span>
                 </button>
                 </Link>
                </div>
@@ -97,7 +97,7 @@ const Navbar = () => {
                    
                 <Link to="/login">
                  <button
-                className="middle none center  rounded-lg bg-gradient-to-tr from-blue-400 to-blue-900 py-2 px-4  text-sm font-bold  text-black shadow-md shadow-blue-500/70 transition-all hover:shadow-lg hover:shadow-yellow-300/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none md:inline-block lg:inline-block"
+                className="text-white  bg-blue-800 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                 type="button"
                 data-ripple-light="true"
                 >
